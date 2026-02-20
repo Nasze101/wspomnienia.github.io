@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/svg+xml" href="zasoby/logo.svg">
+    <title>kocham cie</title>
+
+    <style>
+html, body {
+    height: 80%;
+    background-color: black;
+    color: #ffffff;
+}
+
+.kochamcie-tekst {
+    color: red;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 33px;
+    text-align: center;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;  /* elementy ustawione pionowo */
+    gap: 15px;               /* odstęp między elementami */
+    align-items: center; 
+    margin-top: 150px;
+}
+
+/* Styl dla wszystkich przycisków naraz */
+.btn-wspomnienia,
+.btn-listy,
+.btn-co {
+    background-color: black;
+    border: 2px solid red;
+    color: red;
+    transition: 0.3s;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 133px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.btn-wspomnienia:active,
+.btn-listy:active,
+.btn-co:active {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-co {
+  width: 165px;
+}
+    </style>
+</head>
+<body>
+    <div class="panel">
+      <h3 class="kochamcie-tekst">Kocham cie</h3>
+          <button class="btn-wspomnienia">Wspomnienia</button>
+    <button class="btn-listy">Listy</button>
+    <button class="btn-co">Co w tobie kocham</button>
+    </div>
+    
+    <script>
+      document.querySelector(".btn-wspomnienia").addEventListener("click", function() {
+    window.location.href = "wspomnienia.html";
+});
+
+document.querySelector(".btn-listy").addEventListener("click", function() {
+    window.location.href = "listy.html";
+});
+
+document.querySelector(".btn-co").addEventListener("click", function() {
+    window.location.href = "cokocham.html";
+});
+    </script>
+</body>
+</html>

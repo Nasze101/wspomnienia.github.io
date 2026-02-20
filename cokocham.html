@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeszyt</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100dvh;
+}
+
+/* Cała strona = kartka */
+body {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #ffffff,
+      #ffffff 31px,
+      #c3d9ff 32px
+    );
+}
+
+/* Czerwona linia marginesu */
+body::before {
+  content: "";
+  position: fixed;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: red;
+}
+
+/* Pole do pisania */
+textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0 20px 0 80px; /* odsunięcie od czerwonej linii */
+
+  border: none;
+  outline: none;
+  resize: none;
+
+  background: transparent;
+
+  font-family: 'Patrick Hand', cursive;
+  font-size: 22px;
+  line-height: 32px;
+
+  color: black;
+  caret-color: #1a1a8f;
+}
+</style>
+</head>
+
+<body>
+<textarea disabled>
+          co w tobie kocham
+          
+- twój piękny uśmiech
+- twój zapach
+- twoje poczucie humoru
+</textarea>
+</body>
+</html>
